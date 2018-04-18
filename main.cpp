@@ -18,6 +18,10 @@ void sortNums(int &r,int &g,int &b)
   {
     r = blueNum;
   }
+  else if(redNum < greenNum && redNum < blueNum && greenNum > blueNum)
+  {
+    r = greenNum;
+  }
 
   if(greenNum > redNum && greenNum > blueNum)
   {
@@ -27,15 +31,22 @@ void sortNums(int &r,int &g,int &b)
   {
     g = blueNum;
   }
+  else if(greenNum < redNum && greenNum < blueNum && redNum > blueNum)
+  {
+    g = redNum;
+  }
 
   if (blueNum > redNum && blueNum > greenNum)
   {
     b = redNum;
   }
-  
   else if(blueNum < redNum && blueNum > greenNum)
   {
     b = greenNum;
+  }
+  else if(blueNum < redNum && blueNum > greenNum && redNum > greenNum)
+  {
+    b = redNum;
   }
 }
 
