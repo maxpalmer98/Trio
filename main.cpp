@@ -1,3 +1,4 @@
+//Author: Maxwell Palmer
 #include <iostream>
 #include <vector>
 #include <string>
@@ -14,7 +15,7 @@ void sortNums(int &r,int &g,int &b)
   {
     r = greenNum;
   }
-  else if(redNum < greenNum && redNum < blueNum)
+  else if(redNum < greenNum && redNum < blueNum && blueNum > greenNum)
   {
     r = blueNum;
   }
@@ -27,7 +28,7 @@ void sortNums(int &r,int &g,int &b)
   {
     g = redNum;
   }
-  else if(greenNum < redNum && greenNum < blueNum)
+  else if(greenNum < redNum && greenNum < blueNum && blueNum > redNum)
   {
     g = blueNum;
   }
@@ -40,7 +41,7 @@ void sortNums(int &r,int &g,int &b)
   {
     b = redNum;
   }
-  else if(blueNum < redNum && blueNum > greenNum)
+  else if(blueNum < redNum && blueNum > greenNum && greenNum > redNum)
   {
     b = greenNum;
   }
